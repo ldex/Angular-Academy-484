@@ -1,59 +1,48 @@
-# DemoApp
+# Application de démonstration Académie Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.25.
+Projet de démonstration codé lors d'un <a href="https://angular.ac/fr" target="_blank">atelier Académie Angular</a>.
 
-## Development server
+[![Académie Angular](https://www.angularacademy.ca/images/classroom-fr.jpg "Académie Angular")](https://www.academieangular.ca)
 
-To start a local development server, run:
+Académie Angular est un organisme de formation spécialisé dans l'apprentissage du framework Angular et de ses technologies associées.
 
-```bash
-ng serve
+Nous possédons un long historique de <a href="https://www.angularacademy.ca/world-firsts" target="_blank">premières mondiales</a>...
+
+Visitez www.academieangular.ca pour consulter notre liste de formations Angular :
+- <a href="https://www.academieangular.ca/cours/formation-fondamentaux-angular" target="_blank">Fondamentaux Angular</a>
+- <a href="https://www.academieangular.ca/cours/formation-angular-avance" target="_blank">Angular Avancé</a>
+- <a href="https://www.academieangular.ca/cours/formation-angular-signals" target="_blank">Atelier Signals</a>
+- <a href="https://www.academieangular.ca/cours/formation-angular-moderne" target="_blank">Angular Moderne</a>
+- <a href="https://www.academieangular.ca/cours/formation-tester-angular" target="_blank">Tester Angular</a>
+- <a href="https://www.academieangular.ca/cours/formation-angular-rxjs" target="_blank">Atelier RxJS</a>
+
+En anglais uniquement:
+- <a href="https://www.angularacademy.ca/courses/angular-performance-optimization" target="_blank">Optimisation des performances</a>
+- <a href="https://www.angularacademy.ca/courses/ai-for-developer-productivity" target="_blank">L'IA pour la productivité des développeurs</a>
+- <a href="https://www.angularacademy.ca/courses/professional-ai-workflows" target="_blank">Flux de travail professionnels avec l'IA pour Angular</a>
+- <a href="https://www.angularacademy.ca/courses/advanced-angular-testing-training" target="_blank">Tests Angular Avancés</a>
+- <a href="https://www.angularacademy.ca/courses/agentic-ai-with-angular" target="_blank">Interface utilisateur agentique avec Angular</a>
+- <a href="https://www.angularacademy.ca/courses/angular-architecture-training" target="_blank">Architectures Angular prêtes pour l'IA avec Signals</a>
+
+## Certifications Angular !
+
+Testez vos compétences Angular et tentez un examen de <a href="https://www.academieangular.ca/angular-certification" target="_blank">Certification</a>! (en anglais)
+
+[![Académie Angular](https://www.academieangular.ca/images/levels.jpg "Certifications Angular (en anglais)")](https://www.academieangular.ca/angular-certification)
+
+
+## Installation locale
+
+Vous devez d'abord restaurer les dépendances npm :
+
+```sh
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Lancer l'application sur un serveur de développement local
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+npx ng serve -o
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+L'application s'exécute sur http://localhost:4200/ et se rechargera automatiquement si vous modifiez et enregistrez l'un des fichiers source.
