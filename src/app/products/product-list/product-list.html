@@ -10,7 +10,7 @@
     <div class="loading"></div>
 } @else {
     <ul class="products">
-        @for (product of products(); track product.id) {
+        @for (product of products() | slice:start():end(); track product.id) {
             <li [class.discontinued]="product.discontinued"
                 [class.selected]="product === selectedProduct()"
                 (click)="select(product)">
@@ -21,5 +21,10 @@
         }
     </ul>
 
-    <app-product-details [product]="selectedProduct()"></app-product-details>
+    <div>
+        <button (click)="changePage(-1)" [disabled]="start() === 0">Previous</button>
+        Page {{ pageNumber() }}
+        <button (click)="changePage(1)" [disabled]="products().length <= end()">Next</button>
+    </div>
+
 }

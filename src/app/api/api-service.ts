@@ -14,4 +14,8 @@ export class ApiService {
   loadProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl).pipe(delay(1500)); // Simulate a delay for loading products
   }
+
+  loadProduct(id: number): Observable<Product> {
+    return this.http.get<Product>(this.baseUrl + id).pipe(delay(1000));
+  }
 }

@@ -2,7 +2,13 @@
     Selected product
 </h2>
 
-@if (product(); as product) {
+@if(errorMessage()) {
+    <div class="errorMessage">
+        {{ errorMessage() }}
+    </div>
+} @else if (isLoading()) {
+    <div class="loading"></div>
+} @else if (product(); as product) {
     <div>
         <h3>{{product.name | uppercase}}</h3>
         @if (product.imageUrl) {
