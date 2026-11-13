@@ -1,4 +1,4 @@
-import { Component, inject, input, signal, Signal } from '@angular/core';
+import { Component, inject, input, OnInit, signal, Signal } from '@angular/core';
 import { Product } from '../../models/product';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { ProductService } from '../product-service';
@@ -9,7 +9,7 @@ import { ProductService } from '../product-service';
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
 })
-export class ProductDetails {
+export class ProductDetails implements OnInit {
   private productService = inject(ProductService);
 
   id = input.required<number>();

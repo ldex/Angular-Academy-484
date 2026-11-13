@@ -1,7 +1,7 @@
 import { inject, Injectable, Signal, signal } from '@angular/core';
 import { ApiService } from '../api/api-service';
 import { Product } from '../models/product';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -66,5 +66,16 @@ export class ProductService {
       },
       error: (err) => this.error.set('Failed to load product.'),
     });
+  }
+
+  async saveProduct(newProduct: Omit<Product, 'id'>): Promise<boolean> {
+    try {
+      const productSaved = await firstValueFrom(this.apiService.saveProduct(newProduct));
+      this.products.update((products) => [...products, productSaved]);
+      console.log('Product saved on the server with id: ' + productSaved.id);
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 }

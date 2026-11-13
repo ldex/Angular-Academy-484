@@ -3,11 +3,11 @@ import { Product } from '../../models/product';
 import { CurrencyPipe, SlicePipe, UpperCasePipe } from '@angular/common';
 import { ProductDetails } from '../product-details/product-details';
 import { ProductService } from '../product-service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [CurrencyPipe, UpperCasePipe, SlicePipe, ProductDetails],
+  imports: [CurrencyPipe, UpperCasePipe, SlicePipe, ProductDetails, RouterLink],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })

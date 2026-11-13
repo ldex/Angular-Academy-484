@@ -21,6 +21,10 @@
         }
     </ul>
 
+    <div class="right">
+        <a routerLink="form">Add new product...</a>
+    </div>
+
     <div>
         <button (click)="changePage(-1)" [disabled]="start() === 0">Previous</button>
         Page {{ pageNumber() }}
